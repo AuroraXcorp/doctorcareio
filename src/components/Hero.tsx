@@ -1,7 +1,28 @@
 import { Button } from "@/components/ui/button";
-import { Play, CheckCircle, ArrowRight } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { CheckCircle, ArrowRight, User, Mail, Phone } from "lucide-react";
+import { useState } from "react";
 
 const Hero = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log("Form submitted:", formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
   return (
     <section className="relative min-h-screen bg-hero overflow-hidden pt-20">
       {/* Background Pattern */}
@@ -45,18 +66,6 @@ const Hero = () => {
               Tudo Online. Peça ajuda para a nossa <strong className="text-accent">Inteligência Artificial</strong>.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button variant="hero" size="xl" className="group">
-                Começar Agora — É Grátis
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="whiteOutline" size="xl" className="group">
-                <Play className="w-5 h-5" />
-                Ver Demonstração
-              </Button>
-            </div>
-
             {/* Trust Indicators */}
             <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-primary-foreground/70 text-sm">
               <div className="flex items-center gap-2">
@@ -74,45 +83,71 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Video/Image Placeholder */}
+          {/* Contact Form */}
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-primary-foreground/10 to-primary-foreground/5 rounded-2xl p-2 backdrop-blur-sm border border-primary-foreground/10">
-              <div className="aspect-video bg-primary/50 rounded-xl flex items-center justify-center overflow-hidden relative">
-                {/* Mockup Screen */}
-                <div className="absolute inset-4 bg-gradient-to-br from-card to-secondary rounded-lg shadow-2xl p-4">
-                  <div className="h-full flex flex-col">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-3 h-3 rounded-full bg-destructive/60" />
-                      <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
-                      <div className="w-3 h-3 rounded-full bg-success/60" />
-                    </div>
-                    <div className="flex-1 grid grid-cols-3 gap-3">
-                      <div className="col-span-1 bg-muted rounded-lg p-3 space-y-2">
-                        <div className="h-2 bg-primary/20 rounded w-3/4" />
-                        <div className="h-2 bg-primary/10 rounded w-1/2" />
-                        <div className="h-2 bg-primary/10 rounded w-2/3" />
-                      </div>
-                      <div className="col-span-2 bg-muted rounded-lg p-3 space-y-2">
-                        <div className="h-4 bg-accent/30 rounded w-1/3" />
-                        <div className="h-2 bg-primary/10 rounded w-full" />
-                        <div className="h-2 bg-primary/10 rounded w-4/5" />
-                        <div className="h-2 bg-primary/10 rounded w-3/4" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Play Button Overlay */}
-                <button className="absolute inset-0 flex items-center justify-center group">
-                  <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-accent group-hover:scale-110 transition-transform">
-                    <Play className="w-8 h-8 text-accent-foreground ml-1" fill="currentColor" />
-                  </div>
-                </button>
+            <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
+              <div className="text-center mb-6">
+                <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-2">
+                  Comece Gratuitamente
+                </h2>
+                <p className="text-muted-foreground">
+                  Preencha seus dados e teste por 7 dias grátis
+                </p>
               </div>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Input
+                    type="text"
+                    name="name"
+                    placeholder="Seu nome completo"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="pl-11 h-12 bg-background border-input"
+                    required
+                  />
+                </div>
+
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Seu melhor e-mail"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="pl-11 h-12 bg-background border-input"
+                    required
+                  />
+                </div>
+
+                <div className="relative">
+                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Input
+                    type="tel"
+                    name="phone"
+                    placeholder="Telefone com DDD"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="pl-11 h-12 bg-background border-input"
+                    required
+                  />
+                </div>
+
+                <Button type="submit" variant="hero" size="xl" className="w-full group">
+                  Quero Testar Grátis
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </form>
+
+              <p className="text-center text-muted-foreground text-sm mt-4">
+                🔒 Seus dados estão seguros e protegidos pela LGPD
+              </p>
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-card rounded-xl p-4 shadow-card animate-float">
+            <div className="absolute -bottom-6 -left-6 bg-card rounded-xl p-4 shadow-card animate-float hidden md:block">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
                   <span className="text-2xl">🏆</span>
