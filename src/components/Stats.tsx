@@ -1,46 +1,38 @@
-import { Mic, Users, Clock, Sparkles } from "lucide-react";
-
 const Stats = () => {
   const stats = [
     {
-      icon: Users,
-      value: "10.000+",
-      label: "Médicos Ativos",
-      description: "Profissionais usando diariamente",
+      value: "10K+",
+      label: "Médicos Cadastrados",
+      description: "Profissionais que confiam na plataforma",
     },
     {
-      icon: Mic,
-      value: "2M+",
-      label: "Comandos de Voz",
-      description: "Processados por mês",
+      value: "12+",
+      label: "Ferramentas Únicas",
+      description: "Soluções completas para sua clínica",
     },
     {
-      icon: Clock,
-      value: "70%",
-      label: "Tempo Economizado",
-      description: "Em documentação clínica",
+      value: "8K+",
+      label: "Usuários Ativos",
+      description: "Usando diariamente o sistema",
     },
     {
-      icon: Sparkles,
-      value: "99.2%",
-      label: "Precisão da IA",
-      description: "Em transcrições médicas",
+      value: "98%",
+      label: "Satisfação",
+      description: "Taxa de aprovação dos clientes",
     },
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white border-y border-border/50">
+    <section className="py-16 bg-secondary border-y border-border">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center group"
+              className="text-center"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="w-7 h-7 text-primary" />
-              </div>
-              <p className="font-heading text-3xl md:text-4xl font-bold text-gradient mb-1">
+              <p className="font-heading text-4xl md:text-5xl font-bold text-accent mb-2">
                 {stat.value}
               </p>
               <p className="font-heading font-semibold text-foreground mb-1">

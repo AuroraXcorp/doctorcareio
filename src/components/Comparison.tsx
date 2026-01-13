@@ -1,95 +1,93 @@
 import { Button } from "@/components/ui/button";
-import { X, Check, ArrowRight, Keyboard, Mic } from "lucide-react";
+import { X, Check, ArrowRight } from "lucide-react";
 
 const Comparison = () => {
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section className="py-20 md:py-32 bg-secondary">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            Comparativo
+          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+            Duas Opções
           </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-            Digitação vs <span className="text-gradient">Voz com IA</span>
+            Você decide o seu caminho
           </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Without Voice AI */}
-          <div className="bg-white border border-border rounded-3xl p-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl" />
+          {/* Option 1 - Without Doctorcare */}
+          <div className="bg-card border border-border rounded-2xl p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-destructive/5 rounded-full blur-3xl" />
             
             <div className="relative">
-              <div className="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center mb-6">
-                <Keyboard className="w-8 h-8 text-red-500" />
+              <div className="w-16 h-16 rounded-2xl bg-destructive/10 flex items-center justify-center mb-6">
+                <X className="w-8 h-8 text-destructive" />
               </div>
 
-              <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
-                Digitação Manual
+              <h3 className="font-heading text-2xl font-bold text-foreground mb-4">
+                Sem Doctorcare
               </h3>
-              <p className="text-muted-foreground mb-6">O método tradicional que consome seu tempo</p>
 
               <ul className="space-y-4 mb-8">
                 {[
-                  "20+ minutos digitando por consulta",
-                  "Olhos no teclado, não no paciente",
-                  "Erros de digitação frequentes",
-                  "Fadiga e dores nas mãos",
-                  "Templates rígidos e limitados",
-                  "Informações incompletas",
-                  "Retrabalho constante",
+                  "Horas perdidas com papelada",
+                  "Agenda desorganizada e faltas frequentes",
+                  "Prontuários espalhados e difíceis de encontrar",
+                  "Receitas manuais sujeitas a erros",
+                  "Sem controle financeiro real",
+                  "Dados vulneráveis e sem backup",
+                  "Estresse e sobrecarga diária",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <X className="w-3 h-3 text-red-500" />
+                    <div className="w-5 h-5 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <X className="w-3 h-3 text-destructive" />
                     </div>
                     <span className="text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="text-sm text-muted-foreground italic border-t border-border pt-4">
-                O tempo gasto com burocracia é tempo longe do paciente.
+              <p className="text-sm text-muted-foreground italic">
+                Continue perdendo tempo e dinheiro com processos ultrapassados...
               </p>
             </div>
           </div>
 
-          {/* With Voice AI */}
-          <div className="bg-gradient-to-br from-primary to-accent rounded-3xl p-8 relative overflow-hidden text-white">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl" />
+          {/* Option 2 - With Doctorcare */}
+          <div className="bg-primary border border-primary rounded-2xl p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full blur-3xl" />
             
             <div className="relative">
-              <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-6">
-                <Mic className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 rounded-2xl bg-accent/20 flex items-center justify-center mb-6">
+                <Check className="w-8 h-8 text-accent" />
               </div>
 
-              <h3 className="font-heading text-2xl font-bold mb-2">
-                Com Médico no Bolso
+              <h3 className="font-heading text-2xl font-bold text-primary-foreground mb-4">
+                Com Doctorcare
               </h3>
-              <p className="text-white/80 mb-6">Fale e deixe a IA trabalhar por você</p>
 
               <ul className="space-y-4 mb-8">
                 {[
-                  "3 minutos ditando por consulta",
-                  "Olhos no paciente, voz no sistema",
-                  "Transcrição com 99% de precisão",
-                  "Conforto e ergonomia total",
-                  "IA adapta ao seu estilo",
-                  "Documentação completa e rica",
-                  "Primeira versão quase final",
+                  "Prontuário preenchido em segundos com IA",
+                  "Agenda inteligente com confirmação automática",
+                  "Todos os dados centralizados e acessíveis",
+                  "Receitas digitais com assinatura eletrônica",
+                  "Dashboards financeiros em tempo real",
+                  "Dados criptografados e backup automático",
+                  "Mais tempo para você e seus pacientes",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3 h-3 text-primary" />
+                    <div className="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-accent-foreground" />
                     </div>
-                    <span className="text-white/90">{item}</span>
+                    <span className="text-primary-foreground/90">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <Button size="lg" className="w-full bg-white text-primary hover:bg-white/90 group">
-                Experimentar Agora — É Grátis
+              <Button variant="hero" size="lg" className="w-full group">
+                Começar Agora — É Grátis
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
