@@ -8,7 +8,6 @@ const Header = () => {
   const navLinks = [
     { label: "Funcionalidades", href: "#features" },
     { label: "Depoimentos", href: "#testimonials" },
-    { label: "Preços", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
   ];
 
@@ -45,7 +44,7 @@ const Header = () => {
               Entrar
             </Button>
             <Button variant="hero" size="default">
-              Começar Grátis
+              Fale Conosco
             </Button>
           </div>
 
@@ -81,7 +80,7 @@ const Header = () => {
                   Entrar
                 </Button>
                 <Button variant="hero" size="lg" className="w-full">
-                  Começar Grátis
+                  Fale Conosco
                 </Button>
               </div>
             </nav>

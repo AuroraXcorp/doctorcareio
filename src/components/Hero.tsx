@@ -70,15 +70,15 @@ const Hero = () => {
             <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-primary-foreground/70 text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-accent" />
-                <span>Sem cartão de crédito</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-accent" />
-                <span>Teste por 7 dias</span>
+                <span>Atendimento personalizado</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-accent" />
                 <span>Suporte 24/7</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-accent" />
+                <span>IA integrada</span>
               </div>
             </div>
           </div>
@@ -88,10 +88,10 @@ const Hero = () => {
             <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
               <div className="text-center mb-6">
                 <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-2">
-                  Comece Gratuitamente
+                  Fale Conosco Hoje
                 </h2>
                 <p className="text-muted-foreground">
-                  Preencha seus dados e teste por 7 dias grátis
+                  Preencha seus dados e entraremos em contato
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ const Hero = () => {
                 </div>
 
                 <Button type="submit" variant="hero" size="xl" className="w-full group">
-                  Quero Testar Grátis
+                  Fale Conosco Hoje
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
