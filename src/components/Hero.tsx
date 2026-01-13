@@ -42,9 +42,9 @@ const Hero = () => {
             </div>
 
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
-              Evite Erros Comuns e{" "}
+              Médicos e IA impulsionam o{" "}
               <span className="relative">
-                Otimize Suas Tarefas
+                atendimento ao paciente
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   height="8"
