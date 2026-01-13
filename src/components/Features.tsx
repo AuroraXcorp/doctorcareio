@@ -10,7 +10,8 @@ import {
   BarChart3,
   MessageSquare,
   Stethoscope,
-  Smartphone
+  Smartphone,
+  Wand2
 } from "lucide-react";
 
 const Features = () => {
@@ -86,6 +87,12 @@ const Features = () => {
       title: "Aplicativo Mobile",
       description: "Acesse de qualquer lugar com nosso app para iOS e Android.",
       highlight: "iOS/Android",
+    },
+    {
+      icon: Wand2,
+      title: "Migração Mágica",
+      description: "Migração de sistema em poucos minutos. Transfira todos os dados do seu sistema atual sem dor de cabeça.",
+      highlight: "Rápido",
     },
   ];
 
