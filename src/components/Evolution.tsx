@@ -57,18 +57,6 @@ const Evolution = () => {
               </div>
             </div>
             
-            {/* Floating badge */}
-            <div className="absolute -bottom-4 -left-4 md:-left-8 px-4 py-3 bg-card rounded-2xl shadow-xl border border-border/50">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
-                  <span className="text-white text-lg">✨</span>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Novas funções</p>
-                  <p className="text-xs text-muted-foreground">Atualizações diárias</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
