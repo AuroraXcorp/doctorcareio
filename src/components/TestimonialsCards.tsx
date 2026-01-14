@@ -1,4 +1,11 @@
 import { Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const TestimonialsCards = () => {
   const testimonials = [
@@ -35,7 +42,7 @@ const TestimonialsCards = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-muted/30 to-background">
+    <section className="py-20 md:py-32 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -50,55 +57,64 @@ const TestimonialsCards = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid - Masonry Style */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`relative rounded-3xl overflow-hidden group ${
-                index === 1 ? "md:mt-12" : ""
-              } ${index === 2 ? "lg:mt-24" : ""}`}
-            >
-              {/* Background Image */}
-              <div className="aspect-[3/4] relative">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                
-                {/* Card Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="backdrop-blur-md bg-black/40 rounded-2xl p-5 border border-white/10">
-                    {/* Quote Icon */}
-                    <div className="flex items-center gap-1 text-accent mb-3">
-                      <Quote className="w-4 h-4 fill-accent" />
-                      <Quote className="w-4 h-4 fill-accent" />
+        {/* Carousel */}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <div className="relative rounded-3xl overflow-hidden group h-[480px]">
+                  {/* Background Image */}
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  
+                  {/* Light Gradient Overlay - only at bottom for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  
+                  {/* Card Content */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <div className="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/20">
+                      {/* Quote Icon */}
+                      <div className="flex items-center gap-0.5 text-accent mb-3">
+                        <Quote className="w-4 h-4 fill-accent" />
+                        <Quote className="w-4 h-4 fill-accent" />
+                      </div>
+                      
+                      {/* Name */}
+                      <h3 className="font-heading font-bold text-white text-lg mb-1">
+                        {testimonial.name}
+                      </h3>
+                      
+                      {/* Content */}
+                      <p className="text-white/90 text-sm leading-relaxed">
+                        {testimonial.content}
+                      </p>
+                      
+                      {/* Role Badge */}
+                      <span className="inline-block mt-3 text-xs text-accent font-medium">
+                        {testimonial.role}
+                      </span>
                     </div>
-                    
-                    {/* Name */}
-                    <h3 className="font-heading font-bold text-white text-lg mb-1">
-                      {testimonial.name}
-                    </h3>
-                    
-                    {/* Content */}
-                    <p className="text-white/80 text-sm leading-relaxed">
-                      {testimonial.content}
-                    </p>
-                    
-                    {/* Role Badge */}
-                    <span className="inline-block mt-3 text-xs text-accent/80 font-medium">
-                      {testimonial.role}
-                    </span>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          
+          {/* Navigation Buttons */}
+          <div className="flex justify-center gap-4 mt-8">
+            <CarouselPrevious className="relative inset-auto translate-x-0 translate-y-0 bg-accent/10 border-accent/30 hover:bg-accent hover:text-white" />
+            <CarouselNext className="relative inset-auto translate-x-0 translate-y-0 bg-accent/10 border-accent/30 hover:bg-accent hover:text-white" />
+          </div>
+        </Carousel>
       </div>
     </section>
   );
