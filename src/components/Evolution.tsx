@@ -4,9 +4,6 @@ const Evolution = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-            Inovação Médica
-          </span>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             A medicina está{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">

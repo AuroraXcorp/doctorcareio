@@ -36,10 +36,6 @@ const Security = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <Shield className="w-4 h-4" />
-            Segurança e Suporte
-          </span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-primary-foreground mb-6">
             Seus dados protegidos com{" "}
             <span className="text-accent">máxima segurança</span>

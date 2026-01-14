@@ -53,9 +53,6 @@ const FeaturesShowcase = () => {
     <section className="py-20 md:py-32 bg-[#0a0a0a]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-            Funcionalidades
-          </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Tudo que você precisa em um só lugar
           </h2>
