@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImg from "@/assets/logo-doctorcare.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,27 +19,18 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo - Hidden on mobile, visible on desktop */}
+          {/* Mobile: Logo image only */}
+          <a href="#" className="md:hidden">
+            <img src={logoImg} alt="Doctor Care" className="w-10 h-10 object-contain" />
+          </a>
+
+          {/* Desktop: Full logo with text */}
           <a href="#" className="hidden md:flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
-              <span className="text-accent-foreground font-heading font-bold text-xl">D</span>
-            </div>
+            <img src={logoImg} alt="Doctor Care" className="w-10 h-10 object-contain" />
             <span className="font-heading font-bold text-xl text-foreground">
               Doctor<span className="text-accent">care</span>
             </span>
           </a>
-
-          {/* Mobile: Menu button on left */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
-            ) : (
-              <Menu className="w-6 h-6 text-foreground" />
-            )}
-          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -63,7 +55,7 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile: CTA Buttons always visible */}
+          {/* Mobile: CTA Buttons + Menu button */}
           <div className="md:hidden flex items-center gap-2">
             <Button variant="ghost" size="sm" className="text-sm px-3">
               Entrar
@@ -71,6 +63,16 @@ const Header = () => {
             <Button variant="hero" size="sm" className="text-sm px-3">
               Fale Conosco
             </Button>
+            <button
+              className="p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6 text-foreground" />
+              ) : (
+                <Menu className="w-6 h-6 text-foreground" />
+              )}
+            </button>
           </div>
         </div>
 
