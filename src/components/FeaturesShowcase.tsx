@@ -72,52 +72,71 @@ const FeaturesShowcase = () => {
               const Icon = feature.icon;
               
               return (
-                <button
-                  key={feature.id}
-                  onClick={() => setActiveFeature(feature)}
-                  className={`w-full text-left p-6 rounded-2xl transition-all duration-300 group ${
-                    isActive
-                      ? "bg-white/5 border border-white/10"
-                      : "hover:bg-white/[0.02] border border-transparent"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className={`p-2 rounded-lg transition-colors ${
-                        isActive ? "bg-primary/20 text-primary" : "bg-white/5 text-gray-400 group-hover:text-white"
-                      }`}>
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h3 className={`text-xl font-semibold transition-colors ${
-                          isActive ? "text-white" : "text-gray-300 group-hover:text-white"
+                <div key={feature.id}>
+                  <button
+                    onClick={() => setActiveFeature(feature)}
+                    className={`w-full text-left p-6 rounded-2xl transition-all duration-300 group ${
+                      isActive
+                        ? "bg-white/5 border border-white/10"
+                        : "hover:bg-white/[0.02] border border-transparent"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className={`p-2 rounded-lg transition-colors ${
+                          isActive ? "bg-primary/20 text-primary" : "bg-white/5 text-gray-400 group-hover:text-white"
                         }`}>
-                          {feature.title}
-                        </h3>
-                        {isActive && (
-                          <p className="text-gray-400 mt-2 text-sm md:text-base animate-fade-in">
-                            {feature.description}
-                          </p>
-                        )}
+                          <Icon className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h3 className={`text-xl font-semibold transition-colors ${
+                            isActive ? "text-white" : "text-gray-300 group-hover:text-white"
+                          }`}>
+                            {feature.title}
+                          </h3>
+                          {isActive && (
+                            <p className="text-gray-400 mt-2 text-sm md:text-base animate-fade-in">
+                              {feature.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                      <div className={`p-2 rounded-lg transition-all ${
+                        isActive 
+                          ? "bg-white text-black" 
+                          : "bg-transparent text-gray-500 group-hover:text-white"
+                      }`}>
+                        <ArrowRight className={`w-5 h-5 transition-transform ${
+                          isActive ? "" : "group-hover:translate-x-1"
+                        }`} />
                       </div>
                     </div>
-                    <div className={`p-2 rounded-lg transition-all ${
-                      isActive 
-                        ? "bg-white text-black" 
-                        : "bg-transparent text-gray-500 group-hover:text-white"
-                    }`}>
-                      <ArrowRight className={`w-5 h-5 transition-transform ${
-                        isActive ? "" : "group-hover:translate-x-1"
-                      }`} />
+                  </button>
+                  
+                  {/* Mobile: Image appears below active card */}
+                  {isActive && (
+                    <div className="lg:hidden mt-4 mb-4 animate-fade-in">
+                      <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
+                        <img
+                          src={feature.image}
+                          alt={feature.title}
+                          className="w-full aspect-[4/3] object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <h4 className="text-lg font-bold text-white mb-1">{feature.title}</h4>
+                          <p className="text-gray-300 text-sm">{feature.description}</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </button>
+                  )}
+                </div>
               );
             })}
           </div>
 
-          {/* Right side - Feature image */}
-          <div className="relative lg:sticky lg:top-24">
+          {/* Right side - Feature image (desktop only) */}
+          <div className="hidden lg:block relative lg:sticky lg:top-24">
             <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
               <img
                 key={activeFeature.id}
