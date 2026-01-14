@@ -11,7 +11,8 @@ import {
   MessageSquare,
   Stethoscope,
   Smartphone,
-  Wand2
+  Wand2,
+  DollarSign
 } from "lucide-react";
 
 const Features = () => {
@@ -93,6 +94,12 @@ const Features = () => {
       title: "Migração Mágica",
       description: "Migração de sistema em poucos minutos. Transfira todos os dados do seu sistema atual sem dor de cabeça.",
       highlight: "Rápido",
+    },
+    {
+      icon: DollarSign,
+      title: "Gestão de Glosas",
+      description: "IA checando as Glosas do paciente automaticamente. Evite perder dinheiro por conta do convênio.",
+      highlight: "+35% receita",
     },
   ];
 

@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Features from "@/components/Features";
-import GlosasSection from "@/components/GlosasSection";
+
 import GovSection from "@/components/GovSection";
 import Comparison from "@/components/Comparison";
 import Testimonials from "@/components/Testimonials";
@@ -19,7 +19,7 @@ const Index = () => {
       <Hero />
       <Stats />
       <Features />
-      <GlosasSection />
+      
       <GovSection />
       <Comparison />
       <Testimonials />
