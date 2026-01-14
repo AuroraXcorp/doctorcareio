@@ -8,15 +8,18 @@ const Header = () => {
   const navLinks = [
     { label: "Funcionalidades", href: "#features" },
     { label: "Depoimentos", href: "#testimonials" },
+    { label: "Segurança", href: "#security" },
     { label: "FAQ", href: "#faq" },
+    { label: "Planos", href: "#pricing" },
+    { label: "Blog", href: "#blog" },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          {/* Logo - Hidden on mobile, visible on desktop */}
+          <a href="#" className="hidden md:flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
               <span className="text-accent-foreground font-heading font-bold text-xl">D</span>
             </div>
@@ -24,6 +27,18 @@ const Header = () => {
               Doctor<span className="text-accent">care</span>
             </span>
           </a>
+
+          {/* Mobile: Menu button on left */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6 text-foreground" />
+            ) : (
+              <Menu className="w-6 h-6 text-foreground" />
+            )}
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -38,7 +53,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost" size="sm">
               Entrar
@@ -48,17 +63,15 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
-            ) : (
-              <Menu className="w-6 h-6 text-foreground" />
-            )}
-          </button>
+          {/* Mobile: CTA Buttons always visible */}
+          <div className="md:hidden flex items-center gap-2">
+            <Button variant="ghost" size="sm" className="text-sm px-3">
+              Entrar
+            </Button>
+            <Button variant="hero" size="sm" className="text-sm px-3">
+              Fale Conosco
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -75,14 +88,6 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <div className="flex flex-col gap-2 pt-4">
-                <Button variant="ghost" size="lg" className="w-full">
-                  Entrar
-                </Button>
-                <Button variant="hero" size="lg" className="w-full">
-                  Fale Conosco
-                </Button>
-              </div>
             </nav>
           </div>
         )}
