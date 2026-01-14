@@ -73,9 +73,12 @@ const GovSection = () => {
               Agora em <strong className="text-foreground">2026</strong>, novas práticas de monitoramento 
               de pacientes vieram à tona. As sanções para quem não se adequar podem ser severas.
             </p>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
               Com o nosso sistema de <strong className="text-foreground">NFS-e (Nota Fiscal Eletrônica)</strong> integrada 
               com o GOV, você se livra de problemas que possam vir por conta das novas sanções.
+            </p>
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+              Por dentro do sistema financeiro vai ter a opção de escolher se quer enviar a nota fiscal do serviço automaticamente ou não.
             </p>
 
             {/* Alert box */}
@@ -85,8 +88,8 @@ const GovSection = () => {
                 <div>
                   <div className="font-semibold text-foreground mb-1">Não seja pego de surpresa</div>
                   <div className="text-sm text-muted-foreground">
-                    Médicos que não emitirem NFS-e corretamente podem enfrentar multas 
-                    e problemas com a Receita Federal. Automatize agora e fique tranquilo.
+                    Médicos que não emitirem NFS-e podem enfrentar multas de até R$ 50 mil reais. 
+                    Automatize agora e fique tranquilo.
                   </div>
                 </div>
               </div>
