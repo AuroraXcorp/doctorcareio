@@ -9,7 +9,7 @@ const Stats = () => {
       label: "Ferramentas Únicas",
     },
     {
-      value: "800",
+      value: "800+",
       label: "Usuários Ativos",
     },
     {
