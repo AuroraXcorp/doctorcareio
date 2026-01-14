@@ -36,7 +36,7 @@ const TestimonialsCards = () => {
     {
       name: "Dr. Felipe Mendes",
       role: "Neurologista",
-      image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&h=800&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&h=800&fit=crop&crop=face",
       content: "O melhor sistema que já usei. A integração com WhatsApp mudou minha comunicação com pacientes.",
     },
   ];
@@ -65,9 +65,9 @@ const TestimonialsCards = () => {
           }}
           className="w-full max-w-6xl mx-auto"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-6">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-6 basis-full sm:basis-1/2 lg:basis-1/3">
                 <div className="relative rounded-3xl overflow-hidden group h-[480px]">
                   {/* Background Image */}
                   <img
