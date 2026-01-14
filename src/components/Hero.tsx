@@ -36,10 +36,6 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-accent/20 text-accent-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              Software de Gestão Médica #1 do Brasil
-            </div>
 
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
               Médicos e IA impulsionam o{" "}
@@ -146,18 +142,6 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-card rounded-xl p-4 shadow-card animate-float hidden md:block">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">🏆</span>
-                </div>
-                <div>
-                  <p className="font-heading font-semibold text-foreground">+10.000</p>
-                  <p className="text-sm text-muted-foreground">Médicos ativos</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
