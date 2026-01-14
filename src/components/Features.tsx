@@ -8,8 +8,8 @@ const Features = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-            O Que Você Vai{" "}
-            <span className="text-gradient">Receber</span>
+            Tudo que você precisa em{" "}
+            <span className="text-gradient">um só lugar</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A medicina evoluiu. Seu consultório também precisa evoluir. 
