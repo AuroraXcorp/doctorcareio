@@ -35,10 +35,12 @@ const Evolution = () => {
               Todos nossos clientes relatam que sua Gestão Profissional melhorou imediatamente após começarem usar o DoctorCare no seu dia a dia.
             </p>
 
-            <div className="flex items-center gap-2 text-primary font-medium pt-4">
-              <span className="w-8 h-0.5 bg-primary rounded-full"></span>
-              Comece sua evolução hoje
-            </div>
+            <a
+              href="#cta"
+              className="inline-flex items-center gap-2 px-6 py-3 mt-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Comece Agora
+            </a>
           </div>
 
           {/* Image */}
