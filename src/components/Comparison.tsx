@@ -47,29 +47,31 @@ const Comparison = () => {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pt-4 md:pt-24 items-start">
+          <div className="flex flex-col md:flex-row gap-6 lg:gap-10 pt-4 md:pt-24 items-stretch justify-center">
             {/* Option 1 - Without Doctorcare (Light card) */}
-            <div className="relative">
-              <div className="bg-muted/50 rounded-2xl p-8 lg:p-10 h-full border border-border/50">
-                {/* Price Label */}
-                <div className="text-center mb-6">
+            <div className="relative flex-1 max-w-sm">
+              <div className="bg-muted/50 rounded-xl p-6 lg:p-8 h-full border border-border/50 flex flex-col">
+                {/* Label */}
+                <div className="mb-4">
                   <span className="text-muted-foreground tracking-[0.2em] uppercase text-xs font-medium">
                     Sem DoctorCare
                   </span>
-                  <div className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-2">
-                    Estresse
-                  </div>
                 </div>
 
+                {/* Title */}
+                <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Estresse
+                </h3>
+
                 {/* Description */}
-                <p className="text-muted-foreground text-center mb-8 leading-relaxed">
-                  Continue com processos manuais, horas perdidas com papelada, agenda desorganizada e sem controle financeiro real. O caminho difícil que consome seu tempo e energia.
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
+                  Continue com processos manuais, horas perdidas com papelada, agenda desorganizada e sem controle financeiro real.
                 </p>
 
                 {/* Button */}
                 <Button 
                   variant="outline" 
-                  size="lg" 
+                  size="default" 
                   className="w-full bg-foreground text-background hover:bg-foreground/90 border-0 font-semibold"
                 >
                   Continuar Assim
@@ -78,39 +80,41 @@ const Comparison = () => {
             </div>
 
             {/* VS Circle - Center */}
-            <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="w-16 h-16 rounded-full border-2 border-primary bg-background flex items-center justify-center">
-                <span className="text-primary font-medium text-lg">vs</span>
+            <div className="flex items-center justify-center py-4 md:py-0">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-primary bg-background flex items-center justify-center shadow-md">
+                <span className="text-primary font-medium text-sm md:text-base">vs</span>
               </div>
             </div>
 
             {/* Option 2 - With Doctorcare (Dark card) */}
-            <div className="relative">
-              <div className="bg-primary rounded-2xl p-8 lg:p-10 h-full shadow-2xl">
-                {/* Price Label */}
-                <div className="text-center mb-6">
+            <div className="relative flex-1 max-w-sm">
+              <div className="bg-primary rounded-xl p-6 lg:p-8 h-full shadow-2xl flex flex-col">
+                {/* Label */}
+                <div className="mb-4">
                   <span className="text-primary-foreground/70 tracking-[0.2em] uppercase text-xs font-medium">
                     Com DoctorCare
                   </span>
-                  <div className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mt-2">
-                    Liberdade
-                  </div>
                 </div>
 
+                {/* Title */}
+                <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+                  Liberdade
+                </h3>
+
                 {/* Description */}
-                <p className="text-primary-foreground/80 text-center mb-8 leading-relaxed">
-                  Acesse tecnologia de ponta com IA, prontuários em segundos, agenda inteligente e dashboards financeiros. O caminho inteligente que multiplica seu tempo e resultados.
+                <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6 flex-grow">
+                  Acesse tecnologia de ponta com IA, prontuários em segundos, agenda inteligente e dashboards financeiros.
                 </p>
 
                 {/* Button */}
-                <a href="#cta">
+                <a href="#cta" className="block">
                   <Button 
                     variant="outline" 
-                    size="lg" 
+                    size="default" 
                     className="w-full bg-background text-primary hover:bg-background/90 border-0 font-semibold group"
                   >
                     Começar Agora
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </a>
               </div>
