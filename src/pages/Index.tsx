@@ -6,6 +6,7 @@ import Evolution from "@/components/Evolution";
 import GovSection from "@/components/GovSection";
 import Comparison from "@/components/Comparison";
 import Testimonials from "@/components/Testimonials";
+import TestimonialsCards from "@/components/TestimonialsCards";
 import Security from "@/components/Security";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -23,6 +24,7 @@ const Index = () => {
       <GovSection />
       <Comparison />
       <Testimonials />
+      <TestimonialsCards />
       <Security />
       <FAQ />
       <CTA />
