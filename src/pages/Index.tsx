@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Features from "@/components/Features";
+import FeaturesShowcase from "@/components/FeaturesShowcase";
 import Evolution from "@/components/Evolution";
 import GovSection from "@/components/GovSection";
 import Comparison from "@/components/Comparison";
@@ -20,6 +21,7 @@ const Index = () => {
       <Hero />
       <Stats />
       <Features />
+      <FeaturesShowcase />
       <Evolution />
       <GovSection />
       <Comparison />
