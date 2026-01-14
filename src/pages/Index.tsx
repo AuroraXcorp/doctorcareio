@@ -22,11 +22,11 @@ const Index = () => {
       <Stats />
       <Features />
       <FeaturesShowcase />
-      <Evolution />
-      <GovSection />
-      <Comparison />
       <Testimonials />
       <TestimonialsCards />
+      <GovSection />
+      <Comparison />
+      <Evolution />
       <Security />
       <FAQ />
       <CTA />
