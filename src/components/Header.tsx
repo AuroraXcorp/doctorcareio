@@ -44,21 +44,29 @@ const Header = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Entrar
+            <Button variant="ghost" size="sm" asChild>
+              <a href="https://mediconobolso.app" target="_blank" rel="noopener noreferrer">
+                Entrar
+              </a>
             </Button>
-            <Button variant="hero" size="default">
-              Fale Conosco
+            <Button variant="hero" size="default" asChild>
+              <a href="#hero">
+                Fale Conosco
+              </a>
             </Button>
           </div>
 
           {/* Mobile: CTA Buttons + Menu button */}
           <div className="md:hidden flex items-center gap-2">
-            <Button variant="ghost" size="sm" className="text-sm px-3">
-              Entrar
+            <Button variant="ghost" size="sm" className="text-sm px-3" asChild>
+              <a href="https://mediconobolso.app" target="_blank" rel="noopener noreferrer">
+                Entrar
+              </a>
             </Button>
-            <Button variant="hero" size="sm" className="text-sm px-3">
-              Fale Conosco
+            <Button variant="hero" size="sm" className="text-sm px-3" asChild>
+              <a href="#hero">
+                Fale Conosco
+              </a>
             </Button>
             <button
               className="p-2"

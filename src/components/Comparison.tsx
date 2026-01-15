@@ -107,7 +107,7 @@ const Comparison = () => {
                 </p>
 
                 {/* Button */}
-                <a href="#cta" className="block">
+                <a href="#hero" className="block">
                   <Button 
                     variant="outline" 
                     size="lg" 

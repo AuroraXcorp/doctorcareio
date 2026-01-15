@@ -45,8 +45,10 @@ const Footer = () => {
             </a>
 
             {/* Button */}
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8">
-              Entrar
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8" asChild>
+              <a href="https://mediconobolso.app" target="_blank" rel="noopener noreferrer">
+                Entrar
+              </a>
             </Button>
           </div>
         </div>
@@ -62,8 +64,11 @@ const Footer = () => {
             variant="outline" 
             size="sm"
             className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary rounded-none px-6 text-xs h-8"
+            asChild
           >
-            Comece Agora
+            <a href="#hero">
+              Comece Agora
+            </a>
           </Button>
         </div>
       </div>

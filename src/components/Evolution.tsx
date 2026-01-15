@@ -33,7 +33,7 @@ const Evolution = () => {
             </p>
 
             <a
-              href="#cta"
+              href="#hero"
               className="inline-flex items-center gap-2 px-6 py-3 mt-4 bg-gradient-primary text-white font-semibold rounded-full hover:opacity-90 transition-opacity shadow-accent"
             >
               Comece Agora

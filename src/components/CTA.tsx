@@ -27,12 +27,16 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="xl" className="group bg-gradient-primary hover:opacity-90">
-              Fale Conosco Hoje
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button size="xl" className="group bg-gradient-primary hover:opacity-90" asChild>
+              <a href="#hero">
+                Fale Conosco Hoje
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10">
-              Agendar Demonstração
+            <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <a href="#hero">
+                Agendar Demonstração
+              </a>
             </Button>
           </div>
 
