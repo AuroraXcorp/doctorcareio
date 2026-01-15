@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logoImg from "@/assets/logo-doctorcare.png";
+import { scrollToFormAndFocus } from "@/lib/scrollToForm";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,10 +50,8 @@ const Header = () => {
                 Entrar
               </a>
             </Button>
-            <Button variant="hero" size="default" asChild>
-              <a href="#hero">
-                Fale Conosco
-              </a>
+            <Button variant="hero" size="default" onClick={scrollToFormAndFocus}>
+              Fale Conosco
             </Button>
           </div>
 
@@ -63,10 +62,8 @@ const Header = () => {
                 Entrar
               </a>
             </Button>
-            <Button variant="hero" size="sm" className="text-sm px-3" asChild>
-              <a href="#hero">
-                Fale Conosco
-              </a>
+            <Button variant="hero" size="sm" className="text-sm px-3" onClick={scrollToFormAndFocus}>
+              Fale Conosco
             </Button>
             <button
               className="p-2"

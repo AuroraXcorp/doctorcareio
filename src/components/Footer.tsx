@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { scrollToFormAndFocus } from "@/lib/scrollToForm";
 
 const Footer = () => {
   return (
@@ -64,11 +65,9 @@ const Footer = () => {
             variant="outline" 
             size="sm"
             className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary rounded-none px-6 text-xs h-8"
-            asChild
+            onClick={scrollToFormAndFocus}
           >
-            <a href="#hero">
-              Comece Agora
-            </a>
+            Comece Agora
           </Button>
         </div>
       </div>
