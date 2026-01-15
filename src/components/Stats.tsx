@@ -19,7 +19,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-16 bg-secondary border-y border-border">
+    <section className="py-16 bg-card border-y border-border/50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -28,7 +28,7 @@ const Stats = () => {
               className="text-center"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <p className="font-heading text-4xl md:text-5xl font-bold text-accent mb-2">
+              <p className="font-heading text-4xl md:text-5xl font-bold text-primary mb-2">
                 {stat.value}
               </p>
               <p className="font-heading font-semibold text-foreground">

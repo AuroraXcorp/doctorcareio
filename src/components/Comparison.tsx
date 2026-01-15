@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const Comparison = () => {
   return (
-    <section className="py-20 md:py-32 bg-background relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-secondary relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-8">
@@ -50,7 +50,7 @@ const Comparison = () => {
           <div className="flex flex-col md:flex-row gap-8 lg:gap-12 pt-8 md:pt-28 items-stretch justify-center">
             {/* Option 1 - Without Doctorcare (Light card) */}
             <div className="relative flex-1 max-w-md">
-              <div className="bg-muted/30 rounded-2xl p-8 lg:p-12 h-full border border-border/30 flex flex-col text-center hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-card rounded-2xl p-8 lg:p-12 h-full border border-border shadow-card flex flex-col text-center hover:shadow-lg transition-shadow duration-300">
                 {/* Label */}
                 <div className="mb-6">
                   <span className="inline-block text-muted-foreground tracking-[0.3em] uppercase text-sm font-medium">
@@ -81,28 +81,28 @@ const Comparison = () => {
 
             {/* VS Circle - Center */}
             <div className="flex items-center justify-center py-6 md:py-0">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary bg-background flex items-center justify-center shadow-xl">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary bg-card flex items-center justify-center shadow-xl">
                 <span className="text-primary font-heading font-bold text-lg md:text-xl">vs</span>
               </div>
             </div>
 
             {/* Option 2 - With Doctorcare (Primary card) */}
             <div className="relative flex-1 max-w-md">
-              <div className="bg-primary rounded-2xl p-8 lg:p-12 h-full shadow-2xl flex flex-col text-center hover:shadow-3xl transition-shadow duration-300">
+              <div className="bg-gradient-primary rounded-2xl p-8 lg:p-12 h-full shadow-accent flex flex-col text-center hover:shadow-2xl transition-shadow duration-300">
                 {/* Label */}
                 <div className="mb-6">
-                  <span className="inline-block text-primary-foreground/70 tracking-[0.3em] uppercase text-sm font-medium">
+                  <span className="inline-block text-white/70 tracking-[0.3em] uppercase text-sm font-medium">
                     Com DoctorCare
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
+                <h3 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                   Liberdade
                 </h3>
 
                 {/* Description */}
-                <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-10 flex-grow">
+                <p className="text-white/80 text-base md:text-lg leading-relaxed mb-10 flex-grow">
                   Acesse tecnologia de ponta com IA, prontuários em segundos, agenda inteligente e dashboards financeiros. O caminho inteligente que multiplica seu tempo e resultados.
                 </p>
 
@@ -111,7 +111,7 @@ const Comparison = () => {
                   <Button 
                     variant="outline" 
                     size="lg" 
-                    className="w-full bg-background text-primary hover:bg-background/90 border-0 font-semibold py-6 text-base group"
+                    className="w-full bg-white text-primary hover:bg-white/90 border-0 font-semibold py-6 text-base group"
                   >
                     Começar Agora
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
