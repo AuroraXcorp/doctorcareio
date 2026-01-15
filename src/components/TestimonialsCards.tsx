@@ -42,7 +42,7 @@ const TestimonialsCards = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
+    <section className="py-20 md:py-32 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -73,16 +73,16 @@ const TestimonialsCards = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   
-                  {/* Light Gradient Overlay - only at bottom for text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   
                   {/* Card Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <div className="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/20">
+                    <div className="backdrop-blur-md bg-white/10 rounded-2xl p-5 border border-white/20">
                       {/* Quote Icon */}
-                      <div className="flex items-center gap-0.5 text-accent mb-3">
-                        <Quote className="w-4 h-4 fill-accent" />
-                        <Quote className="w-4 h-4 fill-accent" />
+                      <div className="flex items-center gap-0.5 text-primary mb-3">
+                        <Quote className="w-4 h-4 fill-primary" />
+                        <Quote className="w-4 h-4 fill-primary" />
                       </div>
                       
                       {/* Name */}
@@ -96,7 +96,7 @@ const TestimonialsCards = () => {
                       </p>
                       
                       {/* Role Badge */}
-                      <span className="inline-block mt-3 text-xs text-accent font-medium">
+                      <span className="inline-block mt-3 text-xs text-primary font-medium">
                         {testimonial.role}
                       </span>
                     </div>
@@ -108,8 +108,8 @@ const TestimonialsCards = () => {
           
           {/* Navigation Buttons */}
           <div className="flex justify-center gap-4 mt-8">
-            <CarouselPrevious className="relative inset-auto translate-x-0 translate-y-0 bg-accent/10 border-accent/30 hover:bg-accent hover:text-white" />
-            <CarouselNext className="relative inset-auto translate-x-0 translate-y-0 bg-accent/10 border-accent/30 hover:bg-accent hover:text-white" />
+            <CarouselPrevious className="relative inset-auto translate-x-0 translate-y-0 bg-primary/10 border-primary/30 hover:bg-primary hover:text-white" />
+            <CarouselNext className="relative inset-auto translate-x-0 translate-y-0 bg-primary/10 border-primary/30 hover:bg-primary hover:text-white" />
           </div>
         </Carousel>
       </div>

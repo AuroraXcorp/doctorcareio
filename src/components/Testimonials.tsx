@@ -49,11 +49,11 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-2xl p-8 relative group hover:shadow-card-hover hover:border-accent/30 transition-all duration-300"
+              className="bg-card border border-border rounded-2xl p-8 relative group hover:shadow-xl-custom hover:border-primary/30 transition-all duration-300"
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="w-12 h-12 text-accent" />
+                <Quote className="w-12 h-12 text-primary" />
               </div>
 
               {/* Rating */}
@@ -76,7 +76,7 @@ const Testimonials = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-accent/20"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
                 />
                 <div>
                   <p className="font-heading font-semibold text-foreground">

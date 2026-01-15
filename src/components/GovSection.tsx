@@ -3,7 +3,7 @@ import { Eye, FileCheck, ShieldCheck, AlertCircle } from "lucide-react";
 const GovSection = () => {
   return (
     <section className="py-20 md:py-32 bg-background relative overflow-hidden">
-      {/* Warning pattern background */}
+      {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-20 h-20 border-4 border-destructive rotate-45" />
         <div className="absolute bottom-20 right-20 w-16 h-16 border-4 border-destructive rotate-12" />
@@ -16,10 +16,10 @@ const GovSection = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               {/* Main card */}
-              <div className="bg-card rounded-3xl p-8 border border-border shadow-card">
+              <div className="bg-card rounded-3xl p-8 border border-border shadow-xl-custom">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center">
-                    <FileCheck className="w-7 h-7 text-primary-foreground" />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center">
+                    <FileCheck className="w-7 h-7 text-white" />
                   </div>
                   <div>
                     <div className="font-heading font-semibold text-foreground">NFS-e Integrada</div>
@@ -28,22 +28,22 @@ const GovSection = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3 p-4 bg-green-500/10 rounded-xl border border-green-500/20">
-                    <ShieldCheck className="w-6 h-6 text-green-600" />
+                  <div className="flex items-center gap-3 p-4 bg-success/10 rounded-xl border border-success/20">
+                    <ShieldCheck className="w-6 h-6 text-success" />
                     <div>
                       <div className="font-medium text-foreground text-sm">Emissão Automática</div>
                       <div className="text-xs text-muted-foreground">Notas fiscais em conformidade</div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-4 bg-green-500/10 rounded-xl border border-green-500/20">
-                    <ShieldCheck className="w-6 h-6 text-green-600" />
+                  <div className="flex items-center gap-3 p-4 bg-success/10 rounded-xl border border-success/20">
+                    <ShieldCheck className="w-6 h-6 text-success" />
                     <div>
                       <div className="font-medium text-foreground text-sm">Relatórios Fiscais</div>
                       <div className="text-xs text-muted-foreground">Documentação sempre em dia</div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-4 bg-green-500/10 rounded-xl border border-green-500/20">
-                    <ShieldCheck className="w-6 h-6 text-green-600" />
+                  <div className="flex items-center gap-3 p-4 bg-success/10 rounded-xl border border-success/20">
+                    <ShieldCheck className="w-6 h-6 text-success" />
                     <div>
                       <div className="font-medium text-foreground text-sm">Auditoria Facilitada</div>
                       <div className="text-xs text-muted-foreground">Histórico completo acessível</div>
@@ -53,7 +53,7 @@ const GovSection = () => {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+              <div className="absolute -top-4 -right-4 bg-gradient-primary text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                 2026 Ready
               </div>
             </div>

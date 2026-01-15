@@ -50,13 +50,13 @@ const FeaturesShowcase = () => {
   const [activeFeature, setActiveFeature] = useState(features[0]);
 
   return (
-    <section className="py-20 md:py-32 bg-[#0a0a0a]">
+    <section className="py-20 md:py-32 section-dark">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             O Que Você Vai Receber
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
             Descubra como cada funcionalidade pode transformar sua prática médica
           </p>
         </div>
@@ -74,25 +74,25 @@ const FeaturesShowcase = () => {
                     onClick={() => setActiveFeature(feature)}
                     className={`w-full text-left p-6 rounded-2xl transition-all duration-300 group ${
                       isActive
-                        ? "bg-white/5 border border-white/10"
-                        : "hover:bg-white/[0.02] border border-transparent"
+                        ? "bg-white/10 border border-white/20"
+                        : "hover:bg-white/5 border border-transparent"
                     }`}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
                         <div className={`p-2 rounded-lg transition-colors ${
-                          isActive ? "bg-primary/20 text-primary" : "bg-white/5 text-gray-400 group-hover:text-white"
+                          isActive ? "bg-primary/30 text-primary" : "bg-white/10 text-white/60 group-hover:text-white"
                         }`}>
                           <Icon className="w-5 h-5" />
                         </div>
                         <div>
                           <h3 className={`text-xl font-semibold transition-colors ${
-                            isActive ? "text-white" : "text-gray-300 group-hover:text-white"
+                            isActive ? "text-white" : "text-white/80 group-hover:text-white"
                           }`}>
                             {feature.title}
                           </h3>
                           {isActive && (
-                            <p className="text-gray-400 mt-2 text-sm md:text-base animate-fade-in">
+                            <p className="text-white/60 mt-2 text-sm md:text-base animate-fade-in">
                               {feature.description}
                             </p>
                           )}
@@ -100,8 +100,8 @@ const FeaturesShowcase = () => {
                       </div>
                       <div className={`p-2 rounded-lg transition-all ${
                         isActive 
-                          ? "bg-white text-black" 
-                          : "bg-transparent text-gray-500 group-hover:text-white"
+                          ? "bg-primary text-white" 
+                          : "bg-transparent text-white/40 group-hover:text-white"
                       }`}>
                         <ArrowRight className={`w-5 h-5 transition-transform ${
                           isActive ? "" : "group-hover:translate-x-1"
@@ -122,7 +122,7 @@ const FeaturesShowcase = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-4">
                           <h4 className="text-lg font-bold text-white mb-1">{feature.title}</h4>
-                          <p className="text-gray-300 text-sm">{feature.description}</p>
+                          <p className="text-white/80 text-sm">{feature.description}</p>
                         </div>
                       </div>
                     </div>
@@ -144,13 +144,13 @@ const FeaturesShowcase = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h4 className="text-xl font-bold text-white mb-2">{activeFeature.title}</h4>
-                <p className="text-gray-300 text-sm">{activeFeature.description}</p>
+                <p className="text-white/80 text-sm">{activeFeature.description}</p>
               </div>
             </div>
             
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/30 rounded-full blur-3xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/20 rounded-full blur-3xl" />
           </div>
         </div>
       </div>

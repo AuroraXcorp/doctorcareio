@@ -12,7 +12,6 @@ const Hero = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
   };
 
@@ -24,22 +23,23 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-hero overflow-hidden pt-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 dot-pattern opacity-30" />
+    <section className="relative min-h-screen overflow-hidden pt-20" style={{
+      background: 'linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 40%, #D6EBFF 100%)'
+    }}>
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 dot-pattern opacity-20" />
       
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      {/* Decorative Gradient Orbs */}
+      <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/10 to-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-accent/10 to-primary/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
               Médicos e IA impulsionam o{" "}
-              <span className="relative">
+              <span className="relative text-gradient">
                 atendimento ao paciente
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
@@ -49,7 +49,7 @@ const Hero = () => {
                 >
                   <path
                     d="M1 5.5C47.6667 2.16667 141 -2.4 199 5.5"
-                    stroke="hsl(168 80% 42%)"
+                    stroke="hsl(210 100% 50%)"
                     strokeWidth="3"
                     strokeLinecap="round"
                   />
@@ -57,23 +57,23 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="text-primary-foreground/80 text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0">
               Cadastre pacientes, salve fichas, receitas, exames, agendamento e financeiro. 
-              Tudo Online. Peça ajuda para a nossa <strong className="text-accent">Inteligência Artificial</strong>.
+              Tudo Online. Peça ajuda para a nossa <strong className="text-primary">Inteligência Artificial</strong>.
             </p>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-primary-foreground/70 text-sm">
+            <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-muted-foreground text-sm">
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-accent" />
+                <CheckCircle className="w-5 h-5 text-primary" />
                 <span>Atendimento personalizado</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-accent" />
+                <CheckCircle className="w-5 h-5 text-primary" />
                 <span>Suporte 24/7</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-accent" />
+                <CheckCircle className="w-5 h-5 text-primary" />
                 <span>IA integrada</span>
               </div>
             </div>
@@ -81,7 +81,7 @@ const Hero = () => {
 
           {/* Contact Form */}
           <div className="relative">
-            <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
+            <div className="bg-card rounded-2xl p-8 shadow-xl-custom border border-border/50">
               <div className="text-center mb-6">
                 <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-2">
                   Fale Conosco Hoje
@@ -100,7 +100,7 @@ const Hero = () => {
                     placeholder="Seu nome completo"
                     value={formData.name}
                     onChange={handleChange}
-                    className="pl-11 h-12 bg-background border-input"
+                    className="pl-11 h-12 bg-secondary/50 border-border"
                     required
                   />
                 </div>
@@ -113,7 +113,7 @@ const Hero = () => {
                     placeholder="Seu melhor e-mail"
                     value={formData.email}
                     onChange={handleChange}
-                    className="pl-11 h-12 bg-background border-input"
+                    className="pl-11 h-12 bg-secondary/50 border-border"
                     required
                   />
                 </div>
@@ -126,12 +126,12 @@ const Hero = () => {
                     placeholder="Telefone com DDD"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="pl-11 h-12 bg-background border-input"
+                    className="pl-11 h-12 bg-secondary/50 border-border"
                     required
                   />
                 </div>
 
-                <Button type="submit" variant="hero" size="xl" className="w-full group">
+                <Button type="submit" size="xl" className="w-full group bg-gradient-primary hover:opacity-90 transition-opacity">
                   Fale Conosco Hoje
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -141,7 +141,6 @@ const Hero = () => {
                 🔒 Seus dados estão seguros e protegidos pela LGPD
               </p>
             </div>
-
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 const Evolution = () => {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-background via-muted/30 to-background overflow-hidden">
+    <section className="py-20 md:py-32 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             A medicina está{" "}
-            <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            <span className="text-gradient">
               evoluindo!
             </span>
           </h2>
@@ -34,7 +34,7 @@ const Evolution = () => {
 
             <a
               href="#cta"
-              className="inline-flex items-center gap-2 px-6 py-3 mt-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-6 py-3 mt-4 bg-gradient-primary text-white font-semibold rounded-full hover:opacity-90 transition-opacity shadow-accent"
             >
               Comece Agora
             </a>
@@ -42,7 +42,7 @@ const Evolution = () => {
 
           {/* Image */}
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-3xl bg-gradient-to-br from-primary to-primary/60 p-1 shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-3xl bg-gradient-primary p-1 shadow-accent">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl"></div>
               <div className="relative h-full rounded-[22px] overflow-hidden">
                 <img
@@ -53,7 +53,6 @@ const Evolution = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
