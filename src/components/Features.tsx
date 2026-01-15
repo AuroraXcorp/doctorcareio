@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { scrollToFormAndFocus } from "@/lib/scrollToForm";
 
 const Features = () => {
   return (
@@ -33,7 +34,7 @@ const Features = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button size="lg" className="group bg-gradient-primary hover:opacity-90">
+          <Button size="lg" className="group bg-gradient-primary hover:opacity-90" onClick={scrollToFormAndFocus}>
             Comece Agora
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>

@@ -32,7 +32,7 @@ const CTA = () => {
               Fale Conosco Hoje
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10" onClick={scrollToFormAndFocus}>
+            <Button variant="outline" size="xl" className="border-white/50 bg-white/10 text-white hover:bg-white/20" onClick={scrollToFormAndFocus}>
               Agendar Demonstração
             </Button>
           </div>
