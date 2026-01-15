@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { scrollToFormAndFocus } from "@/lib/scrollToForm";
 
 const Comparison = () => {
   return (
@@ -107,16 +108,15 @@ const Comparison = () => {
                 </p>
 
                 {/* Button */}
-                <a href="#hero" className="block">
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="w-full bg-white text-primary hover:bg-white/90 border-0 font-semibold py-6 text-base group"
-                  >
-                    Começar Agora
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </a>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="w-full bg-white text-primary hover:bg-white/90 border-0 font-semibold py-6 text-base group"
+                  onClick={scrollToFormAndFocus}
+                >
+                  Começar Agora
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </div>
             </div>
           </div>

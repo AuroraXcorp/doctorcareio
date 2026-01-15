@@ -1,3 +1,5 @@
+import { scrollToFormAndFocus } from "@/lib/scrollToForm";
+
 const Evolution = () => {
   return (
     <section className="py-20 md:py-32 bg-secondary overflow-hidden">
@@ -32,12 +34,12 @@ const Evolution = () => {
               Todos nossos clientes relatam que sua Gestão Profissional melhorou imediatamente após começarem usar o DoctorCare no seu dia a dia.
             </p>
 
-            <a
-              href="#hero"
+            <button
+              onClick={scrollToFormAndFocus}
               className="inline-flex items-center gap-2 px-6 py-3 mt-4 bg-gradient-primary text-white font-semibold rounded-full hover:opacity-90 transition-opacity shadow-accent"
             >
               Comece Agora
-            </a>
+            </button>
           </div>
 
           {/* Image */}

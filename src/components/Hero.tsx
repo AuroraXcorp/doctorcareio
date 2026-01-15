@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden pt-20" style={{
+    <section id="hero" className="relative min-h-screen overflow-hidden pt-20" style={{
       background: 'linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 40%, #D6EBFF 100%)'
     }}>
       {/* Subtle Background Pattern */}
@@ -95,6 +95,7 @@ const Hero = () => {
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
+                    id="hero-name-input"
                     type="text"
                     name="name"
                     placeholder="Seu nome completo"
