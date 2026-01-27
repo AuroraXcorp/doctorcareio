@@ -17,45 +17,45 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Content */}
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-foreground leading-tight mb-6">
+          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight mb-5 tracking-tight">
             Médicos e IA impulsionam o{" "}
             <span className="relative text-gradient">
               atendimento ao paciente
               <svg
-                className="absolute -bottom-2 left-0 w-full"
-                height="8"
+                className="absolute -bottom-1 left-0 w-full"
+                height="6"
                 viewBox="0 0 200 8"
                 fill="none"
               >
                 <path
                   d="M1 5.5C47.6667 2.16667 141 -2.4 199 5.5"
                   stroke="hsl(210 100% 50%)"
-                  strokeWidth="3"
+                  strokeWidth="2"
                   strokeLinecap="round"
                 />
               </svg>
             </span>
           </h1>
 
-          <p className="text-muted-foreground text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
             Cadastre pacientes, salve fichas, receitas, exames, agendamento e financeiro. 
             Tudo Online. Peça ajuda para a nossa <strong className="text-primary">Inteligência Artificial</strong>.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
             <Button 
-              size="xl" 
-              className="group bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-10 py-6 h-auto"
+              size="default" 
+              className="group bg-gradient-primary hover:opacity-90 transition-opacity"
               onClick={scrollToFormAndFocus}
             >
               Agende uma demo
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
-              size="xl" 
+              size="default" 
               variant="outline"
-              className="text-lg px-10 py-6 h-auto border-2"
+              className="border-2"
               onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Como funciona
@@ -63,7 +63,7 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap gap-6 justify-center text-muted-foreground text-sm md:text-base">
+          <div className="flex flex-wrap gap-5 justify-center text-muted-foreground text-sm">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-primary" />
               <span>Atendimento personalizado</span>
