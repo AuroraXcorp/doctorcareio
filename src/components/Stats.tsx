@@ -1,19 +1,54 @@
+import { useCountUp } from "@/hooks/useCountUp";
+
+interface StatItemProps {
+  end: number;
+  suffix: string;
+  label: string;
+  delay: number;
+}
+
+const StatItem = ({ end, suffix, label, delay }: StatItemProps) => {
+  const { count, ref, displayValue } = useCountUp({ 
+    end, 
+    duration: 2000 + delay,
+    suffix 
+  });
+
+  return (
+    <div
+      ref={ref}
+      className="text-center group"
+    >
+      <p className="font-heading text-4xl md:text-5xl font-bold text-primary mb-2 transition-transform duration-300 group-hover:scale-110">
+        {displayValue}
+      </p>
+      <p className="font-heading font-semibold text-foreground">
+        {label}
+      </p>
+    </div>
+  );
+};
+
 const Stats = () => {
   const stats = [
     {
-      value: "10k+",
+      end: 10,
+      suffix: "k+",
       label: "Histórias de Sucesso",
     },
     {
-      value: "12+",
+      end: 12,
+      suffix: "+",
       label: "Ferramentas Únicas",
     },
     {
-      value: "800+",
+      end: 800,
+      suffix: "+",
       label: "Usuários Ativos",
     },
     {
-      value: "98%",
+      end: 98,
+      suffix: "%",
       label: "Satisfação",
     },
   ];
@@ -23,18 +58,13 @@ const Stats = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div
+            <StatItem
               key={index}
-              className="text-center"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <p className="font-heading text-4xl md:text-5xl font-bold text-primary mb-2">
-                {stat.value}
-              </p>
-              <p className="font-heading font-semibold text-foreground">
-                {stat.label}
-              </p>
-            </div>
+              end={stat.end}
+              suffix={stat.suffix}
+              label={stat.label}
+              delay={index * 200}
+            />
           ))}
         </div>
       </div>
