@@ -19,7 +19,10 @@ const StatItem = ({ end, suffix, label, delay }: StatItemProps) => {
       ref={ref}
       className="text-center group"
     >
-      <p className="font-heading text-4xl md:text-5xl font-bold text-primary mb-2 transition-transform duration-300 group-hover:scale-110">
+      <p 
+        className="text-4xl md:text-5xl font-bold text-primary mb-2 transition-transform duration-300 group-hover:scale-110 tracking-tight"
+        style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+      >
         {displayValue}
       </p>
       <p className="font-heading font-semibold text-foreground">
