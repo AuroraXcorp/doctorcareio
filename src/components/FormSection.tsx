@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, User, Mail, Phone } from "lucide-react";
+import { ArrowRight, User, Mail, Phone, Lock } from "lucide-react";
 import { useState } from "react";
 
 const FormSection = () => {
@@ -33,10 +33,10 @@ const FormSection = () => {
           {/* Section Header */}
           <div className="text-center mb-10">
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              Agende uma Demo
+              Comece agora mesmo
             </h2>
             <p className="text-muted-foreground text-lg">
-              Preencha seus dados e entraremos em contato para uma demonstração personalizada
+              Preencha seus dados e comece gratuitamente. Sem compromisso.
             </p>
           </div>
 
@@ -84,14 +84,17 @@ const FormSection = () => {
               </div>
 
               <Button type="submit" size="xl" className="w-full group bg-gradient-primary hover:opacity-90 transition-opacity h-14 text-lg">
-                Agende uma Demo
+                Comece agora mesmo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
 
-            <p className="text-center text-muted-foreground text-sm mt-6">
-              🔒 Seus dados estão seguros e protegidos pela LGPD
-            </p>
+            <div className="flex items-center justify-center gap-2 mt-6 text-sm text-muted-foreground">
+              <div className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/10">
+                <Lock className="w-3 h-3 text-primary" />
+              </div>
+              <span>Seus dados estão seguros e protegidos pela LGPD</span>
+            </div>
           </div>
         </div>
       </div>
