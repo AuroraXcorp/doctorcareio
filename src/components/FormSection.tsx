@@ -32,11 +32,8 @@ const FormSection = () => {
         <div className="max-w-xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-10">
-            <span className="inline-block text-muted-foreground tracking-[0.3em] uppercase text-sm font-medium mb-4">
-              Próximo Passo
-            </span>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              Fale Conosco Hoje
+              Agende uma Demo
             </h2>
             <p className="text-muted-foreground text-lg">
               Preencha seus dados e entraremos em contato para uma demonstração personalizada
@@ -87,7 +84,7 @@ const FormSection = () => {
               </div>
 
               <Button type="submit" size="xl" className="w-full group bg-gradient-primary hover:opacity-90 transition-opacity h-14 text-lg">
-                Fale Conosco Hoje
+                Agende uma Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
