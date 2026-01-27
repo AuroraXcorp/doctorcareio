@@ -5,7 +5,7 @@ import Features from "@/components/Features";
 import FeaturesShowcase from "@/components/FeaturesShowcase";
 import Comparison from "@/components/Comparison";
 import FormSection from "@/components/FormSection";
-import Testimonials from "@/components/Testimonials";
+import Partners from "@/components/Partners";
 import TestimonialsCards from "@/components/TestimonialsCards";
 import Security from "@/components/Security";
 import FAQ from "@/components/FAQ";
@@ -24,7 +24,7 @@ const Index = () => {
       <TestimonialsCards />
       <Comparison />
       <FormSection />
-      <Testimonials />
+      <Partners />
       <Security />
       <FAQ />
       <CTA />
