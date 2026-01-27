@@ -19,12 +19,12 @@ const Partners = () => {
           Parceiros do <span className="text-gradient">DoctorCare</span>
         </h2>
         <p className="text-muted-foreground text-lg text-center max-w-2xl mx-auto">
-          Mais de 10.000 profissionais já transformaram suas rotinas com o Doctorcare.
+          Mais de 800 profissionais já transformaram suas rotinas com o Doctorcare.
         </p>
       </div>
 
       {/* Marquee Container */}
-      <div className="relative py-8">
+      <div className="relative py-8 group">
         {/* Gradient Fade Left */}
         <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-background to-transparent z-10" />
         
@@ -32,7 +32,7 @@ const Partners = () => {
         <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-background to-transparent z-10" />
 
         {/* Scrolling Partners */}
-        <div className="flex animate-marquee">
+        <div className="flex animate-marquee group-hover:animate-marquee-slow">
           {[...partners, ...partners, ...partners].map((partner, index) => (
             <div
               key={index}
