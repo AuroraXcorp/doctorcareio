@@ -42,15 +42,23 @@ const Hero = () => {
             Tudo Online. Peça ajuda para a nossa <strong className="text-primary">Inteligência Artificial</strong>.
           </p>
 
-          {/* CTA Button */}
-          <div className="mb-12">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               size="xl" 
               className="group bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-10 py-6 h-auto"
               onClick={scrollToFormAndFocus}
             >
-              Comece Agora
+              Agende uma demo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button 
+              size="xl" 
+              variant="outline"
+              className="text-lg px-10 py-6 h-auto border-2"
+              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Como funciona
             </Button>
           </div>
 

@@ -52,7 +52,7 @@ const Header = () => {
               </a>
             </Button>
             <Button variant="hero" size="default" onClick={scrollToFormAndFocus}>
-              Fale Conosco
+              Comece agora
             </Button>
           </div>
 
@@ -64,7 +64,7 @@ const Header = () => {
               </a>
             </Button>
             <Button variant="hero" size="sm" className="text-sm px-3" onClick={scrollToFormAndFocus}>
-              Fale Conosco
+              Comece agora
             </Button>
             <button
               className="p-2"
