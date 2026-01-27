@@ -37,45 +37,24 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-            Cadastre pacientes, salve fichas, receitas, exames, agendamento e financeiro. 
-            Tudo Online. Peça ajuda para a nossa <strong className="text-primary">Inteligência Artificial</strong>.
-          </p>
-
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
             <Button 
-              size="default" 
-              className="group bg-gradient-primary hover:opacity-90 transition-opacity"
+              size="lg" 
+              className="group bg-gradient-primary hover:opacity-90 transition-opacity px-8"
               onClick={scrollToFormAndFocus}
             >
               Agende uma demo
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
-              size="default" 
+              size="lg" 
               variant="outline"
-              className="border-2"
+              className="border-2 px-8"
               onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Como funciona
             </Button>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap gap-5 justify-center text-muted-foreground text-sm">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-primary" />
-              <span>Atendimento personalizado</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-primary" />
-              <span>Suporte 24/7</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-primary" />
-              <span>IA integrada</span>
-            </div>
           </div>
         </div>
       </div>
