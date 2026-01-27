@@ -2,14 +2,14 @@ import { Heart, Building2, Stethoscope, Activity, Cross, Shield, Plus, Pill } fr
 
 const Partners = () => {
   const partners = [
-    { name: "Santa Rita", subtitle: "HOSPITAL", icon: Cross },
-    { name: "Hospital Belo Horizonte", subtitle: "", icon: Building2 },
-    { name: "Beep Saúde", subtitle: "", icon: Activity },
-    { name: "ProSaúde", subtitle: "SERVIÇO INTEGRADO", icon: Shield },
-    { name: "Clínica Vida Nova", subtitle: "CENTRO MÉDICO", icon: Heart },
-    { name: "MedCenter", subtitle: "SAÚDE & BEM-ESTAR", icon: Stethoscope },
-    { name: "Hospital São Lucas", subtitle: "", icon: Plus },
-    { name: "CardioVita", subtitle: "CLÍNICA ESPECIALIZADA", icon: Pill },
+    { name: "Clínica Aurora", subtitle: "SAÚDE INTEGRAL", icon: Heart },
+    { name: "Hospital Vitale", subtitle: "", icon: Building2 },
+    { name: "MedPlus", subtitle: "DIAGNÓSTICOS", icon: Activity },
+    { name: "Saúde Prime", subtitle: "CENTRO MÉDICO", icon: Shield },
+    { name: "Instituto Cura", subtitle: "", icon: Cross },
+    { name: "VidaCare", subtitle: "MEDICINA AVANÇADA", icon: Stethoscope },
+    { name: "Clínica Bem Estar", subtitle: "", icon: Plus },
+    { name: "HealthPoint", subtitle: "ESPECIALIDADES", icon: Pill },
   ];
 
   return (
@@ -24,7 +24,7 @@ const Partners = () => {
       </div>
 
       {/* Marquee Container */}
-      <div className="relative py-6">
+      <div className="relative py-8">
         {/* Gradient Fade Left */}
         <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-background to-transparent z-10" />
         
@@ -36,17 +36,17 @@ const Partners = () => {
           {[...partners, ...partners, ...partners].map((partner, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 md:gap-4 mx-8 md:mx-14 shrink-0"
+              className="flex items-center gap-4 md:gap-5 mx-10 md:mx-16 shrink-0"
             >
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-secondary flex items-center justify-center border border-border/50">
-                <partner.icon className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground/70" />
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-secondary flex items-center justify-center border border-border/50">
+                <partner.icon className="w-7 h-7 md:w-8 md:h-8 text-primary/70" />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg md:text-xl font-semibold text-muted-foreground/80 whitespace-nowrap">
+                <span className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground/80 whitespace-nowrap">
                   {partner.name}
                 </span>
                 {partner.subtitle && (
-                  <span className="text-[9px] md:text-[10px] tracking-widest text-muted-foreground/50 uppercase">
+                  <span className="text-[10px] md:text-xs tracking-widest text-muted-foreground/60 uppercase">
                     {partner.subtitle}
                   </span>
                 )}
