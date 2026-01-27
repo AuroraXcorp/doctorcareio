@@ -6,6 +6,7 @@ import FeaturesShowcase from "@/components/FeaturesShowcase";
 import Evolution from "@/components/Evolution";
 import GovSection from "@/components/GovSection";
 import Comparison from "@/components/Comparison";
+import FormSection from "@/components/FormSection";
 import Testimonials from "@/components/Testimonials";
 import TestimonialsCards from "@/components/TestimonialsCards";
 import Security from "@/components/Security";
@@ -25,6 +26,7 @@ const Index = () => {
       <TestimonialsCards />
       <GovSection />
       <Comparison />
+      <FormSection />
       <Testimonials />
       <Evolution />
       <Security />
