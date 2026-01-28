@@ -67,7 +67,7 @@ const Header = () => {
               className="text-white/80 hover:text-white hover:bg-white/10 font-medium"
               asChild
             >
-              <a href="https://mediconobolso.app" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.doctorcare.io" target="_blank" rel="noopener noreferrer">
                 Entrar
               </a>
             </Button>
@@ -89,7 +89,7 @@ const Header = () => {
               className="text-white/80 hover:text-white hover:bg-white/10 text-xs px-2.5 h-8 font-medium" 
               asChild
             >
-              <a href="https://mediconobolso.app" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.doctorcare.io" target="_blank" rel="noopener noreferrer">
                 Entrar
               </a>
             </Button>
